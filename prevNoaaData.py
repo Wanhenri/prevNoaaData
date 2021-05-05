@@ -156,10 +156,11 @@ def automation(*args):
 
                     print(os.path.exists(dir_local + filename))
 
-                    """ Após baixado o arquivo, ocorrerá a descompactação dos dados dentro do mesmo local de dowload 
+                    """ Após baixado o arquivo, ocorrerá a descompactação dos dados dentro do mesmo local de dowload
+                    
+                    link: https://programadorviking.com.br/python-zipfile/
                     """
 
-                    #https://programadorviking.com.br/python-zipfile/
                     ZipExtract = ZipFile(dir_local + filename, 'r')
                     ZipExtract.extractall(dir_local)
                     ZipExtract.close()
