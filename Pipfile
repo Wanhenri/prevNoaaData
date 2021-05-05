@@ -1,0 +1,15 @@
+[[source]]
+url = 'https://pypi.python.org/simple'
+verify_ssl = true
+name = 'pypi'
+
+[packages]
+requests = "~=2.22.0"
+flake8 = "==3.8.0"
+tzlocal = "*"
+pytz = "*"
+zipfile36 = "*"
+
+
+[requires]
+python="3.7.5"
