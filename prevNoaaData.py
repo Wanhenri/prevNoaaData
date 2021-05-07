@@ -24,7 +24,7 @@ from temporizador import IntervalRunner
 from datetime import datetime, timezone, timedelta, date
 from tzlocal import get_localzone
 
-from descompactar import unzipefile
+#from descompactar import unzipefile
 
 def convert_bytes(num):
     """Essa função converterá os byte para MB.... GB... etc
