@@ -14,6 +14,7 @@ import os
 import itertools as it
 from log import log,logerro
 from zipfile import ZipFile
+#import zipfile
 import threading
 from threading import Thread
 
@@ -156,14 +157,20 @@ def automation(*args):
 
                     print(os.path.exists(dir_local + filename))
 
-                    """ Após baixado o arquivo, ocorrerá a descompactação dos dados dentro do mesmo local de dowload
-                    
-                    link: https://programadorviking.com.br/python-zipfile/
+                    """ Após baixado o arquivo, ocorrerá a descompactação dos dados dentro do mesmo local de dowload 
                     """
 
-                    ZipExtract = ZipFile(dir_local + filename, 'r')
-                    ZipExtract.extractall(dir_local)
-                    ZipExtract.close()
+                    #https://programadorviking.com.br/python-zipfile/
+                    #ZipExtract = ZipFile(dir_local + filename, 'r')
+                    #ZipExtract.extractall(dir_local)
+                    #ZipExtract.close()
+                    path = os.path.join(dir_local, filename)
+                    print(path)
+                    zf = ZipFile(path, 'r')
+                    zf.extractall(dir_local)
+                    zf.close() # close file after extraction is completed'''
+                    #permissao = 755
+                    #os.chmod(filename,permissao)
 
                     """ Um arquivo de log é gerado com as informações necessárias sobre o arquivo baixado 
                     """
@@ -171,7 +178,7 @@ def automation(*args):
     
     except Exception as e:
         print(e)
-        logerro()    
+        logerro(filename,sizeFile)    
 
 #Rodando de tempo e tempo
 interval_monitor = IntervalRunner(86400.0,automation)
