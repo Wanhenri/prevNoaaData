@@ -22,7 +22,7 @@ from temporizador import IntervalRunner
 
 #import pytz
 from datetime import datetime, timezone, timedelta, date
-from tzlocal import get_localzone
+#from tzlocal import get_localzone
 
 #from descompactar import unzipefile
 
