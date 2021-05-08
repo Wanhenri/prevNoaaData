@@ -171,6 +171,7 @@ def automation(*args):
                     zf.close() # close file after extraction is completed'''
                     #permissao = 755
                     #os.chmod(filename,permissao)
+                    os.system('chmod 755 -R *')
 
                     """ Um arquivo de log é gerado com as informações necessárias sobre o arquivo baixado 
                     """
